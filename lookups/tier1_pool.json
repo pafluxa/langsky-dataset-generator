@@ -1,0 +1,176 @@
+{
+    "01": [
+        "UNIMARC",
+        "JUMBO",
+        "LIDER",
+        "SANTA ISABEL",
+        "TOTTUS",
+        "ACUENTA",
+        "OK MARKET",
+        "MAYORISTA 10"
+    ],
+    "02": [
+        "LIQUIDOS.CL",
+        "BEERHOUSE",
+        "LA VINOTECA",
+        "SUPERMERCADO"
+    ],
+    "03": [
+        "FALABELLA",
+        "RIPLEY",
+        "PARIS",
+        "HITES",
+        "LA POLAR",
+        "ZARA",
+        "H&M",
+        "TRICOT",
+        "ABC DIN"
+    ],
+    "04": [
+        "ENEL DISTRIBUCION",
+        "AGUAS ANDINAS",
+        "METROGAS",
+        "CHILQUINTA",
+        "CGE DISTRIBUCION",
+        "GASTOS COMUNES"
+    ],
+    "05": [
+        "SODIMAC",
+        "EASY",
+        "HOMY",
+        "CASA&IDEAS",
+        "IMPERIAL",
+        "IKEA"
+    ],
+    "06": {
+        "standard": [
+            "CRUZ VERDE",
+            "SALCOBRAND",
+            "AHUMADA",
+            "CESFAM",
+            "HOSPITAL PUBLICO",
+            "CONSULTORIO"
+        ],
+        "premium": [
+            "CLINICA LAS CONDES",
+            "CLINICA ALEMANA",
+            "CLINICA SANTA MARIA",
+            "CLINICA INDISA",
+            "CLINICA DAVILA",
+            "RED SALUD UC CHRISTUS",
+            "MEGASALUD",
+            "VIDAINTEGRA",
+            "CRUZ VERDE",
+            "SALCOBRAND"
+        ]
+    },
+    "07": {
+        "standard": [
+            "BIP CARGA",
+            "METRO DE SANTIAGO",
+            "COPEC",
+            "SHELL",
+            "PETROBRAS"
+        ],
+        "premium": [
+            "COPEC",
+            "SHELL",
+            "PETROBRAS",
+            "UBER",
+            "CABIFY",
+            "DIDI"
+        ]
+    },
+    "08": [
+        "ENTEL",
+        "MOVISTAR",
+        "WOM",
+        "CLARO",
+        "VTR",
+        "GTD MANQUEHUE",
+        "MUNDO PACIFICO",
+        "STARLINK",
+        "NETFLIX",
+        "SPOTIFY",
+        "YOUTUBE PREMIUM",
+        "DISNEY PLUS",
+        "HBO MAX",
+        "AMAZON PRIME",
+        "APPLE",
+        "GOOGLE"
+    ],
+    "09": [
+        "CINEMARK",
+        "CINEPLANET",
+        "CINEPOLIS",
+        "TICKETMASTER",
+        "PUNTOTICKET",
+        "SPORTLIFE",
+        "PACIFIC FITNESS",
+        "SMARTFIT",
+        "PLAYSTATION STORE",
+        "STEAM",
+        "NINTENDO",
+        "LIBRERIA ANTARTICA",
+        "BUSCALIBRE"
+    ],
+    "10": [
+        "COLEGIO",
+        "UNIVERSIDAD",
+        "INSTITUTO",
+        "PREUNIVERSITARIO",
+        "DUOC UC",
+        "INACAP",
+        "KUMON",
+        "BRITANICO"
+    ],
+    "11": {
+        "standard": [
+            "MCDONALDS",
+            "BURGER KING",
+            "DOGGIS",
+            "JUAN MAESTRO",
+            "TARRAGONA",
+            "TELEPIZZA"
+        ],
+        "premium": [
+            "STARBUCKS",
+            "RAPPI",
+            "UBER EATS",
+            "PEDIDOSYA",
+            "DOMINOS",
+            "PAPA JOHNS",
+            "MCDONALDS",
+            "BURGER KING",
+            "SUSHI DELIVERY",
+            "IFOOD"
+        ]
+    },
+    "12": [
+        "ISAPRE BANMEDICA",
+        "ISAPRE COLMENA",
+        "ISAPRE CONSALUD",
+        "ISAPRE CRUZ BLANCA",
+        "ISAPRE NUEVA MASVIDA",
+        "FONASA",
+        "AFP HABITAT",
+        "AFP CUPRUM",
+        "AFP PROVIDA",
+        "AFP CAPITAL",
+        "AFP MODELO",
+        "AFP UNO",
+        "SEGUROS SURA",
+        "MAPFRE",
+        "BCI SEGUROS"
+    ],
+    "13": [
+        "FARMACIAS KNOP",
+        "CRUZ VERDE",
+        "PREUNIC",
+        "NATURA",
+        "AVON",
+        "ESIKA",
+        "BARBERIA",
+        "PELUQUERIA"
+    ]
+}

@@ -1,0 +1,149 @@
+{
+    "01": {
+        "prefixes": [
+            "MINIMARKET", "ALMACEN", "BOTILLERIA", "DISTRIBUIDORA",
+            "AMASANDERIA", "PANADERIA", "CARNICERIA", "VERDULERIA",
+            "FRUTERIA", "ROTISERIA", "FIAMBRERIA", "DESPENSA",
+            "EMPORIO", "BAZAR ALIMENTOS"
+        ],
+        "suffixes": [
+            "PROVIDENCIA", "MAIPU", "LA FLORIDA", "NUNOA",
+            "SAN MIGUEL", "PUENTE ALTO", "LAS CONDES", "VITACURA",
+            "SANTIAGO CENTRO", "MACUL", "PENALOLEN", "RECOLETA",
+            "INDEPENDENCIA", "SAN BERNARDO", "LA GRANJA", "EL BOSQUE",
+            "LA CISTERNA", "LO PRADO", "CERRILLOS", "QUINTA NORMAL",
+            "ESTACION CENTRAL", "LO BARNECHEA", "LA REINA", "HUECHURABA",
+            "CERRO NAVIA", "RENCA", "CONCHALI", "SAN JOAQUIN",
+            "SAN RAMON", "PAC", "PEDRO AGUIRRE CERDA"
+        ],
+        "numbered": true,
+        "p_suffix": 0.5,
+        "p_number": 0.3
+    },
+    "02": {
+        "prefixes": [
+            "BOTILLERIA", "LICORERIA", "DISTRIBUIDORA", "DEPOSITO"
+        ],
+        "suffixes": [
+            "PROVIDENCIA", "MAIPU", "LA FLORIDA", "NUNOA",
+            "SANTIAGO CENTRO", "PUENTE ALTO", "SAN BERNARDO"
+        ],
+        "numbered": true,
+        "p_suffix": 0.5,
+        "p_number": 0.2
+    },
+    "03": {
+        "prefixes": [
+            "TIENDA", "BOUTIQUE", "ROPAVEJERO", "BAZAR",
+            "IMPORTADORA", "CALZADOS", "ZAPATERIA", "ROPA AMERICANA",
+            "FERIA"
+        ],
+        "suffixes": [
+            "PATRONATO", "MEIGGS", "BIO BIO", "FRANKLIN",
+            "MAIPU", "LA FLORIDA", "PUENTE ALTO", "SAN BERNARDO",
+            "MALL CHINO", "PERSA"
+        ],
+        "numbered": true,
+        "p_suffix": 0.5,
+        "p_number": 0.2
+    },
+    "05": {
+        "prefixes": [
+            "FERRETERIA", "MUEBLERIA", "BARRACA", "VIDRIERIA",
+            "CARPINTERIA", "TAPICERIA", "BAZAR HOGAR", "ELECTRODOMESTICOS"
+        ],
+        "suffixes": [
+            "FRANKLIN", "BIO BIO", "MAIPU", "LA FLORIDA",
+            "PUENTE ALTO", "SAN BERNARDO", "SANTIAGO CENTRO"
+        ],
+        "numbered": true,
+        "p_suffix": 0.4,
+        "p_number": 0.2
+    },
+    "06": {
+        "prefixes": [
+            "FARMACIA", "CONSULTORIO", "LABORATORIO", "CENTRO MEDICO",
+            "OPTICA", "CLINICA DENTAL", "KINESIOLOGIA"
+        ],
+        "suffixes": [
+            "PROVIDENCIA", "MAIPU", "LA FLORIDA", "NUNOA",
+            "SANTIAGO CENTRO", "PUENTE ALTO", "SAN BERNARDO",
+            "LAS CONDES", "MACUL"
+        ],
+        "numbered": false,
+        "p_suffix": 0.6,
+        "p_number": 0.0
+    },
+    "07": {
+        "prefixes": [
+            "ESTACIONAMIENTO", "LAVADO", "TALLER MECANICO",
+            "SERVITECA", "VULCANIZACION", "CAMBIO ACEITE"
+        ],
+        "suffixes": [
+            "MAIPU", "LA FLORIDA", "SANTIAGO CENTRO",
+            "PUENTE ALTO", "SAN BERNARDO", "PROVIDENCIA"
+        ],
+        "numbered": true,
+        "p_suffix": 0.4,
+        "p_number": 0.2
+    },
+    "09": {
+        "prefixes": [
+            "CANCHA", "CLUB DEPORTIVO", "ARRIENDO CANCHA",
+            "LIBRERIA", "BAZAR", "SALA DE JUEGOS", "TALLER ARTE",
+            "CENTRO CULTURAL", "ACADEMIA"
+        ],
+        "suffixes": [
+            "MAIPU", "LA FLORIDA", "NUNOA", "PROVIDENCIA",
+            "PUENTE ALTO", "SAN BERNARDO", "SANTIAGO CENTRO"
+        ],
+        "numbered": true,
+        "p_suffix": 0.5,
+        "p_number": 0.15
+    },
+    "10": {
+        "prefixes": [
+            "COLEGIO", "JARDIN INFANTIL", "ESCUELA", "LICEO",
+            "ACADEMIA", "CENTRO FORMACION", "TALLER", "CLASES PARTICULARES"
+        ],
+        "suffixes": [
+            "MAIPU", "LA FLORIDA", "NUNOA", "PROVIDENCIA",
+            "PUENTE ALTO", "SAN BERNARDO", "SANTIAGO CENTRO",
+            "LAS CONDES", "MACUL", "PENALOLEN"
+        ],
+        "numbered": false,
+        "p_suffix": 0.6,
+        "p_number": 0.0
+    },
+    "11": {
+        "prefixes": [
+            "RESTAURANT", "FUENTE DE SODA", "COCINA", "COMIDA CHINA",
+            "COMIDA PERUANA", "CEVICHERIA", "SUSHI", "EMPANADAS",
+            "SCHOPERIA", "PICADA", "ROTISERIA", "SANGUCHERIA",
+            "CAFETERIA", "PASTELERIA", "HELADERIA"
+        ],
+        "suffixes": [
+            "PROVIDENCIA", "MAIPU", "LA FLORIDA", "NUNOA",
+            "SANTIAGO CENTRO", "BELLAVISTA", "LASTARRIA",
+            "PUENTE ALTO", "SAN BERNARDO", "BARRIO ITALIA",
+            "PATRONATO", "RECOLETA", "FRANKLIN"
+        ],
+        "numbered": true,
+        "p_suffix": 0.5,
+        "p_number": 0.15
+    },
+    "13": {
+        "prefixes": [
+            "PELUQUERIA", "BARBERIA", "CENTRO ESTETICA",
+            "PERFUMERIA", "BAZAR", "COSMETICOS", "LAVANDERIA",
+            "TINTORERIA", "CERRAJERIA", "ZAPATERO"
+        ],
+        "suffixes": [
+            "PROVIDENCIA", "MAIPU", "LA FLORIDA", "NUNOA",
+            "SANTIAGO CENTRO", "PUENTE ALTO", "SAN BERNARDO"
+        ],
+        "numbered": false,
+        "p_suffix": 0.5,
+        "p_number": 0.0
+    }
+}
