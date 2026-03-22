@@ -1,0 +1,14 @@
+[project]
+name = "lansky-dataset-generator"
+version = "0.1.0"
+description = "Reproducible synthetic Chilean household transaction dataset generator"
+license = {text = "MIT"}
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.1",
+    "pyarrow>=14.0",
+]
+
+[project.optional-dependencies]
+dev = ["ruff", "ipython"]

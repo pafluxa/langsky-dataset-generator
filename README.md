@@ -1,2 +1,5 @@
-# langsky-dataset-generator
-Software to generate training data for `lansky`
+# lansky-dataset-generator
+
+Reproducible synthetic Chilean household transaction dataset for training a transaction embedder.
+
+> Work in progress.
