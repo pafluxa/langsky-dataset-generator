@@ -185,3 +185,114 @@ TIER1_QUINTILE_SEGMENTED: dict[str, dict[str, list[int]]] = {
         "standard": [1, 2, 3], # local (handled by p_local), MCDONALDS
     },
 }
+
+# ---------------------
+# Quintile assignment conditional prior
+# ---------------------
+# P(quintile | dwelling_type, tenure_type)
+# Keys: (dwelling_type, tenure_type) as used in HOUSEHOLD_SCHEMA.
+# Values: [P(Q1), P(Q2), P(Q3), P(Q4), P(Q5)] — must sum to 1.0.
+# Based on Chilean RM socioeconomic structure:
+#   - propietario_deuda (mortgage) → higher income signal
+#   - cedida/otro → lower income signal
+#   - departamento propietario → skews Q4-Q5
+QUINTILE_PRIOR: dict[tuple[str, str], list[float]] = {
+    ("casa", "propietario"):        [0.10, 0.15, 0.25, 0.30, 0.20],
+    ("casa", "propietario_deuda"):  [0.05, 0.10, 0.20, 0.35, 0.30],
+    ("casa", "arrendatario"):       [0.20, 0.25, 0.25, 0.20, 0.10],
+    ("casa", "otro"):               [0.35, 0.30, 0.20, 0.10, 0.05],
+    ("depto", "propietario"):       [0.05, 0.10, 0.20, 0.30, 0.35],
+    ("depto", "propietario_deuda"): [0.03, 0.07, 0.20, 0.35, 0.35],
+    ("depto", "arrendatario"):      [0.10, 0.20, 0.30, 0.25, 0.15],
+    ("depto", "otro"):              [0.30, 0.25, 0.25, 0.15, 0.05],
+}
+
+# Household size adjustment: households with 5+ members shift quintile
+# distribution toward lower quintiles. This vector is blended into the
+# prior with weight LARGE_HH_BLEND_WEIGHT.
+LARGE_HH_QUINTILE_SHIFT: list[float] = [0.30, 0.30, 0.20, 0.15, 0.05]
+LARGE_HH_THRESHOLD: int = 5
+LARGE_HH_BLEND_WEIGHT: float = 0.3
+
+# ---------------------
+# Censo 2024 column mapping
+# ---------------------
+# Adjust these if parquet column names differ from expected.
+# Reference: data/diccionario_variables_censo2024.xlsx
+CENSO_HOGARES_FILE: str = "hogares_censo2024.parquet"
+CENSO_VIVIENDAS_FILE: str = "viviendas_censo2024.parquet"
+
+# Hogares columns
+COL_REGION_HOG: str = "region"
+COL_CANT_PER: str = "cant_per"
+COL_TENURE: str = "p07"  # tenencia de la vivienda — VERIFY AGAINST DICTIONARY
+
+# Viviendas columns
+COL_REGION_VIV: str = "region"
+COL_DWELLING_TYPE: str = "p01"  # tipo de vivienda — VERIFY AGAINST DICTIONARY
+
+# Join keys: geographic hierarchy shared between hogares and viviendas.
+# Both tables share these columns. nviv links hogar to its vivienda.
+CENSO_JOIN_KEYS: list[str] = [
+    "region", "provincia", "comuna", "dc", "area", "zcen", "manzana", "nviv",
+]
+
+# Region Metropolitana code
+REGION_RM: int = 13
+
+# Censo tenure code mapping → internal tenure labels
+TENURE_MAP: dict[int, str] = {
+    1: "propietario",        # Propia, pagada totalmente
+    2: "propietario_deuda",  # Propia, pagándose
+    3: "arrendatario",       # Arrendada
+    4: "otro",               # Cedida por familiar u otro
+    5: "otro",               # Cedida por servicio/trabajo
+    6: "otro",               # Otra situación
+}
+
+# Censo dwelling type code mapping → internal labels
+DWELLING_MAP: dict[int, str] = {
+    1: "casa",   # Casa
+    2: "depto",  # Departamento en edificio
+    # All other codes (pieza, mediagua, etc.) → "casa" as fallback
+}
+DWELLING_DEFAULT: str = "casa"
+
+# ---------------------
+# Fallback marginals (used when Censo parquets are not available)
+# ---------------------
+# Empirical approximation of RM joint distribution.
+# Each tuple: (cant_per, tenure, dwelling, weight)
+FALLBACK_MARGINALS: list[tuple[int, str, str, float]] = [
+    # Small households, departamento
+    (1, "arrendatario", "depto", 0.08),
+    (1, "propietario", "depto", 0.04),
+    (2, "arrendatario", "depto", 0.06),
+    (2, "propietario_deuda", "depto", 0.05),
+    # Small households, casa
+    (1, "arrendatario", "casa", 0.03),
+    (1, "propietario", "casa", 0.04),
+    (2, "arrendatario", "casa", 0.04),
+    (2, "propietario", "casa", 0.06),
+    (2, "propietario_deuda", "casa", 0.04),
+    # Medium households
+    (3, "propietario", "casa", 0.08),
+    (3, "propietario_deuda", "casa", 0.05),
+    (3, "arrendatario", "casa", 0.04),
+    (3, "arrendatario", "depto", 0.03),
+    (4, "propietario", "casa", 0.07),
+    (4, "propietario_deuda", "casa", 0.04),
+    (4, "arrendatario", "casa", 0.03),
+    # Large households
+    (5, "propietario", "casa", 0.05),
+    (5, "arrendatario", "casa", 0.03),
+    (6, "propietario", "casa", 0.03),
+    (6, "otro", "casa", 0.02),
+    (7, "propietario", "casa", 0.02),
+    (7, "otro", "casa", 0.01),
+    (8, "otro", "casa", 0.01),
+    # Catch-all to reach ~1.0
+    (3, "propietario_deuda", "depto", 0.03),
+    (4, "propietario", "depto", 0.02),
+    (2, "otro", "casa", 0.02),
+]
